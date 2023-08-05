@@ -173,6 +173,7 @@ export default class App extends React.Component {
             <div className='form-actions'>
               <button onClick={async()=>{
                 await axios.put(`http://localhost:4000/bookings/${paramId}`, {status:'paid'})
+		window.location.reload()
               }}>Submit</button>
             </div>
           </form>
